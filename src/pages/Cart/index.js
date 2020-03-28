@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import {
   MdRemoveCircleOutline,
   MdAddCircleOutline,
@@ -7,7 +8,7 @@ import {
 
 import { Container, ProductTable, Total } from './styles';
 
-export default function Cart() {
+function Cart() {
   return (
     <Container>
       <ProductTable>
@@ -65,3 +66,5 @@ export default function Cart() {
     </Container>
   );
 }
+
+export default connect()(Cart);
